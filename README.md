@@ -4,7 +4,7 @@ A modular UV curing box for post-curing SLA-printed parts. It is built from
 identical square LED boards, joined edge to edge by 3D-printed brackets.
 
 It was designed for the open source nasopharyngeal swab
-([uwo-fast/OpenNasopharyngealSwab](https://github.com/uwo-fast/OpenNasopharyngealSwab)),
+([uwo-fast/nasopharyngeal-swab](https://github.com/uwo-fast/nasopharyngeal-swab)),
 whose resin swab heads it cures, and it was published with the swab in
 Gallup et al. (2020), below. This repository holds its design files, split out of
 the swab repository with their history.
