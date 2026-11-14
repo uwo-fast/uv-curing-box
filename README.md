@@ -25,8 +25,9 @@ pcbnew 5.1.5) and its fabrication output in `elec/Gerbers/`.
   attach.
 
 The schematic leaves the parts' values unset: the LEDs are `LED_g` and the
-resistors `0`. Choose a UV LED, and the resistor for a string of four of them at
-12 V, before ordering.
+resistors `0`. The paper uses 395 nm UV LEDs and twelve boards, and gives the
+whole curing system's cost as $45.42. Choose the LED, and the resistor for a string
+of four of them at 12 V, before ordering.
 The symbols and footprints come from a library, `OCI_UPL`, that is not in this
 repository. The board file carries its own footprints and `UV_Curing_Box-cache.lib`
 carries the schematic symbols, so both open without it.
