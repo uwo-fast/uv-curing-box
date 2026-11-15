@@ -64,12 +64,13 @@ What the paper's box takes:
 | Edge bracket (`edge.stl`) | 12 |
 | Corner bracket (`corner.stl`) | 8 |
 | Plate bracket (`plate.stl`) | 2 |
+| M2 x 10 mm screw | 48 |
 | 12 V DC, 5 A power supply, and an IEC power cord | 1 |
 | 18 AWG wire | 1 m |
 
-The paper's bill of materials also lists 48 M3 x 10 mm bolts. The board's mounting
-holes are 2.2 mm (an M2 footprint) and the brackets' are 2.1 mm (`h_d` in
-`brackets.scad`), so check the screw size against the parts before buying.
+The paper's bill of materials lists the screws as M3, which is an error: the board's
+mounting holes are 2.2 mm (an M2 footprint) and the brackets' are 2.1 mm (`h_d` in
+`brackets.scad`), sized for M2.
 
 1. Lay the boards out unfolded, as the box opens flat, and decide which terminal
    blocks to fit so every board gets power at least once. Not every board needs all
@@ -83,7 +84,7 @@ holes are 2.2 mm (an M2 footprint) and the brackets' are 2.1 mm (`h_d` in
    (`elec/UV_Curing_Box.net`). Check which pin is which before linking two blocks or
    wiring the supply.
 4. Bolt the boards together with the brackets: plate where four boards meet in one
-   plane, edge along an edge, corner at a corner. The paper threads the bolts into
+   plane, edge along an edge, corner at a corner. The paper threads the screws into
    the plastic from inside the box, with no nuts.
 5. Wire the corner joints with insulated wire. Left long, these wires double as the
    lid's hinge.
