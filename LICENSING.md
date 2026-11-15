@@ -2,9 +2,10 @@
 
 The paper this design comes from (Gallup et al. 2020, *HardwareX* 8, e00135)
 releases it under the GNU General Public License v3.0 and the CERN Open Hardware
-Licence v1.2, in its specifications table. Its design-files table lists each file
-(the Gerbers, `Brackets.scad`, the printed parts and the KiCad project) as GPL-3.0.
-This repository applies both licences to all of it:
+Licence v1.2, in its specifications table. Its design-files table lists the Gerbers,
+`Brackets.scad`, the corner, edge and plate meshes, and the KiCad project as GPL-3.0;
+the legs and top are named elsewhere in the paper. This repository applies both
+licences to all of it:
 
 | Files | Licence |
 | --- | --- |
