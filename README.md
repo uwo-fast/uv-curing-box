@@ -83,7 +83,7 @@ mounting holes are 2.2 mm (an M2 footprint) and the brackets' are 2.1 mm (`h_d` 
    the board does not mark it: pin 1 is +12 V on J1 and J4 but ground on J2 and J3
    (`elec/UV_Curing_Box.net`). Check which pin is which before linking two blocks or
    wiring the supply.
-4. Bolt the boards together with the brackets: plate where four boards meet in one
+4. Screw the boards together with the brackets: plate where four boards meet in one
    plane, edge along an edge, corner at a corner. The paper threads the screws into
    the plastic from inside the box, with no nuts.
 5. Wire the corner joints with insulated wire. Left long, these wires double as the
