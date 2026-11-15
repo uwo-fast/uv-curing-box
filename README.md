@@ -59,7 +59,7 @@ What the paper's box takes:
 | Part | Quantity |
 | --- | --- |
 | LED board (from `elec/Gerbers/`) | 12 |
-| 5 mm through-hole UV LED, 395 nm | 12 per board |
+| Through-hole UV LED, 395 nm (the footprint is `LED-5MM`) | 12 per board |
 | 2-pole screw terminal block | up to 4 per board |
 | Edge bracket (`edge.stl`) | 12 |
 | Corner bracket (`corner.stl`) | 8 |
@@ -95,7 +95,7 @@ mounting holes are 2.2 mm (an M2 footprint) and the brackets' are 2.1 mm (`h_d` 
 
 ## Use
 
-Hang the parts to cure tip-down from the holder printed from `legs.stl` and `top.stl`,
+Hang the swabs tip-down from the holder printed from `legs.stl` and `top.stl`,
 set it in the box, close the lid and power the box. The paper cures swabs for 45 min.
 
 ## Origin and licence
