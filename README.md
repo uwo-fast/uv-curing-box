@@ -59,5 +59,6 @@ The design is from:
 
 Its files are also on the Open Science Framework, <https://osf.io/z5jgu/>.
 
-This repository is under the GNU General Public License v3.0, the licence these
-files were under in the swab repository. See [`LICENSE`](LICENSE).
+The paper releases the design under the GNU General Public License v3.0 and the
+CERN Open Hardware Licence v1.2. [`LICENSING.md`](LICENSING.md) says which files
+each covers, and both texts are in [`LICENSES/`](LICENSES).
