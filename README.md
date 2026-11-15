@@ -16,7 +16,7 @@ the swab repository with their history.
 A KiCad 5 project (`UV_Curing_Box.pro`, `.sch`, `.kicad_pcb`, made with
 pcbnew 5.1.5) and its fabrication output in `elec/Gerbers/`.
 
-- A two-layer board, 80 × 80 mm.
+- A two-layer board, 80 x 80 mm.
 - 12 LEDs in 5 mm through-hole footprints, as three strings of four from +12 V to
   ground, each string with one series resistor in a 1206 footprint.
 - 4 two-pole terminal blocks (Phoenix MKDS 1.5), all in parallel across +12 V and
@@ -26,8 +26,8 @@ pcbnew 5.1.5) and its fabrication output in `elec/Gerbers/`.
 
 The schematic leaves the parts' values unset: the LEDs are `LED_g` and the
 resistors `0`. The paper uses 395 nm UV LEDs and twelve boards, and gives the
-whole curing system's cost as $45.42. Choose the LED, and the resistor for a string
-of four of them at 12 V, before ordering.
+whole curing system's cost as $45.42.
+
 The symbols and footprints come from a library, `OCI_UPL`, that is not in this
 repository. The board file carries its own footprints and `UV_Curing_Box-cache.lib`
 carries the schematic symbols, so both open without it.
@@ -42,11 +42,24 @@ its modules, rendered at a finer resolution than the file's `$fn = 30`:
 
 | STL | Module | What it joins | Size (mm) |
 | --- | --- | --- | --- |
-| `plate.stl` | `p_2x2()` | four boards meeting at their corners in one plane | 20.2 × 20.2 × 2 |
-| `edge.stl` | `e_2x2()` | four boards along an edge of the box, two on each face | 20.2 × 13.7 × 13.7 |
-| `corner.stl` | `corner()` | three boards at a corner of the box | 13.7 × 13.7 × 13.7 |
+| `plate.stl` | `p_2x2()` | four boards meeting at their corners in one plane | 20.2 x 20.2 x 2 |
+| `edge.stl` | `e_2x2()` | four boards along an edge of the box, two on each face | 20.2 x 13.7 x 13.7 |
+| `corner.stl` | `corner()` | three boards at a corner of the box | 13.7 x 13.7 x 13.7 |
 
-`legs.stl` (4 × 4.7 × 95 mm) and `top.stl` (74 × 50 × 2.5 mm) have no source here.
+`legs.stl` (4 x 4.7 x 95 mm) and `top.stl` (74 x 50 x 2.5 mm) have no source here.
+
+## Build
+
+1. Order the LED boards from the Gerbers in `elec/Gerbers/`. The paper's box uses
+   twelve.
+2. Choose the UV LED and a series resistor that gives a string of four of them its
+   rated current at 12 V. The paper uses 395 nm LEDs.
+3. Print the brackets from `mech/`: `plate.stl` where four boards meet in one plane,
+   `edge.stl` along an edge of the box, `corner.stl` at a corner. Print `legs.stl`
+   and `top.stl` for the stand.
+4. Join the boards through their M2 mounting holes with the brackets.
+5. Power the boards from 12 V DC. Each board's terminal blocks are wired in
+   parallel, so power can enter one board and chain on to the next.
 
 ## Origin and licence
 
