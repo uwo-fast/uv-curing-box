@@ -34,7 +34,7 @@ carries the schematic symbols, so both open without it.
 
 The Gerbers are dated 2019-08-26 and were exported by a KiCad 6.0 development build.
 
-### `mech/`: the brackets and stand
+### `mech/`: the brackets and swab holder
 
 `brackets.scad` is the OpenSCAD source for the brackets that join boards through
 their mounting holes. Opened on its own it renders `e_2x2()`. Three of the STLs are
@@ -46,20 +46,56 @@ its modules, rendered at a finer resolution than the file's `$fn = 30`:
 | `edge.stl` | `e_2x2()` | four boards along an edge of the box, two on each face | 20.2 x 13.7 x 13.7 |
 | `corner.stl` | `corner()` | three boards at a corner of the box | 13.7 x 13.7 x 13.7 |
 
-`legs.stl` (4 x 4.7 x 95 mm) and `top.stl` (74 x 50 x 2.5 mm) have no source here.
+`legs.stl` (4 x 4.7 x 95 mm) and `top.stl` (74 x 50 x 2.5 mm) are the swab holder: four legs
+and a top the swabs hang from. They have no source here.
 
 ## Build
 
-1. Order the LED boards from the Gerbers in `elec/Gerbers/`. The paper's box uses
-   twelve.
-2. Choose the UV LED and a series resistor that gives a string of four of them its
-   rated current at 12 V. The paper uses 395 nm LEDs.
-3. Print the brackets from `mech/`: `plate.stl` where four boards meet in one plane,
-   `edge.stl` along an edge of the box, `corner.stl` at a corner. Print `legs.stl`
-   and `top.stl` for the stand.
-4. Join the boards through their M2 mounting holes with the brackets.
-5. Power the boards from 12 V DC. Each board's terminal blocks are wired in
-   parallel, so power can enter one board and chain on to the next.
+The paper (sections 5 and 6.1) builds a 4 x 8 x 8 in box from 12 boards. Size a box
+in whole boards, then count the parts from it.
+
+What the paper's box takes:
+
+| Part | Quantity |
+| --- | --- |
+| LED board (from `elec/Gerbers/`) | 12 |
+| 5 mm through-hole UV LED, 395 nm | 12 per board |
+| 2-pole screw terminal block | up to 4 per board |
+| Edge bracket (`edge.stl`) | 12 |
+| Corner bracket (`corner.stl`) | 8 |
+| Plate bracket (`plate.stl`) | 2 |
+| 12 V DC, 5 A power supply, and an IEC power cord | 1 |
+| 18 AWG wire | 1 m |
+
+The paper's bill of materials also lists 48 M3 x 10 mm bolts. The board's mounting
+holes are 2.2 mm (an M2 footprint) and the brackets' are 2.1 mm (`h_d` in
+`brackets.scad`), so check the screw size against the parts before buying.
+
+1. Lay the boards out unfolded, as the box opens flat, and decide which terminal
+   blocks to fit so every board gets power at least once. Not every board needs all
+   four.
+2. Solder the LEDs on the side opposite the silkscreen, so they face into the box.
+   LEDs are polarised. The paper runs them at full intensity: the resistor pads take
+   a 0 ohm resistor, or a bridge cut from an LED lead.
+3. Join the terminal blocks of boards that sit edge to edge in one plane with short
+   lengths of clipped lead, clamped in both blocks. The blocks' polarity differs, and
+   the board does not mark it: pin 1 is +12 V on J1 and J4 but ground on J2 and J3
+   (`elec/UV_Curing_Box.net`). Check which pin is which before linking two blocks or
+   wiring the supply.
+4. Bolt the boards together with the brackets: plate where four boards meet in one
+   plane, edge along an edge, corner at a corner. The paper threads the bolts into
+   the plastic from inside the box, with no nuts.
+5. Wire the corner joints with insulated wire. Left long, these wires double as the
+   lid's hinge.
+6. Wire one terminal block to the supply's + and - terminals, and the IEC cord to its
+   mains terminals. Check the cord's colour code before connecting it.
+7. Before powering it, measure the box's input resistance. Around 5 ohm or less
+   suggests a short.
+
+## Use
+
+Hang the parts to cure tip-down from the holder printed from `legs.stl` and `top.stl`,
+set it in the box, close the lid and power the box. The paper cures swabs for 45 min.
 
 ## Origin and licence
 
