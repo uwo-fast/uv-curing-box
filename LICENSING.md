@@ -10,10 +10,14 @@ licences to all of it:
 | Files | Licence |
 | --- | --- |
 | `mech/` (the bracket source and the printed parts), `elec/` (the KiCad project, netlist and Gerbers), `README.md`, `.gitattributes` | GPL-3.0 and CERN OHL v1.2 |
+| `docs/images/` (photos of the lab's rebuilt box) | CC-BY-4.0 |
+| `CITATION.cff` | CC0-1.0 |
 
-The texts are in [`LICENSES/`](LICENSES): [`GPL-3.0.txt`](LICENSES/GPL-3.0.txt)
-and [`CERN-OHL-1.2.txt`](LICENSES/CERN-OHL-1.2.txt). The root [`LICENSE`](LICENSE)
-is the same GPL-3.0 text, because GitHub reads only that file.
+The texts are in [`LICENSES/`](LICENSES): [`GPL-3.0.txt`](LICENSES/GPL-3.0.txt),
+[`CERN-OHL-1.2.txt`](LICENSES/CERN-OHL-1.2.txt),
+[`CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt) and [`CC0-1.0.txt`](LICENSES/CC0-1.0.txt).
+The root [`LICENSE`](LICENSE) is the same GPL-3.0 text, because GitHub reads
+only that file.
 
 Two of the printed parts, the legs and the top, were also released alongside the
 swab in [ngallup4/Nasal-Swab-Files](https://github.com/ngallup4/Nasal-Swab-Files),
