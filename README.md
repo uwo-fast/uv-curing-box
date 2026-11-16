@@ -106,7 +106,7 @@ was rebuilt with connectors from
 separate parametric library. Its example `examples/example_two_cube_box.scad`
 lays out every part of this box to print.
 
-![The lab's rebuilt box: two 80 mm cubes of LED boards joined by printed corner and edge connectors, standing in a printed tray](docs/images/lab-rebuild.jpg)
+![The lab's rebuilt box: two 80 mm cubes of LED boards, with a perfboard in the lid, joined by printed corner and edge connectors and standing in a printed tray](docs/images/lab-rebuild.jpg)
 
 - The box is two 80 mm cubes end to end, 160 x 80 x 80 mm, from 8 boards: two on
   each long side, one on each end, and two on top as a lid that lifts off. It
