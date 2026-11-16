@@ -98,6 +98,30 @@ mounting holes are 2.2 mm (an M2 footprint) and the brackets' are 2.1 mm (`h_d` 
 Hang the swabs tip-down from the holder printed from `legs.stl` and `top.stl`,
 set it in the box, close the lid and power the box. The paper cures swabs for 45 min.
 
+## Lab rebuild
+
+The printed brackets in `mech/` fit the boards poorly, so the lab's working box
+was rebuilt with connectors from
+[panel-cube-joints](https://github.com/CameronBrooks11/panel-cube-joints), a
+separate parametric library. Its example `examples/example_two_cube_box.scad`
+lays out every part of this box to print.
+
+![The lab's rebuilt box: two 80 mm cubes of LED boards, with a perfboard in the lid, joined by printed corner and edge connectors and standing in a printed tray](docs/images/lab-rebuild.jpg)
+
+- The box is two 80 mm cubes end to end, 160 x 80 x 80 mm, from 8 boards: two on
+  each long side, one on each end, and two on top as a lid that lifts off. It
+  stands in a printed tray, with no board underneath.
+- It takes 12 connectors and 32 M2 screws, one per connector plate: 4 at the top
+  corners, 4 at the bottom corners, 2 along the top where the lid's boards meet,
+  and 2 where the boards meet at the bottom of each long side.
+- The screws tap into holes in the printed connectors. In the first prints a few
+  holes were loose and took nuts; panel-cube-joints now draws a round 1.7 mm
+  pilot for them, which has not been test-printed yet.
+- One lid board, damaged beyond repair, is replaced by a perfboard. The supply
+  leads carry an on/off rocker switch.
+
+![One end of the rebuilt box: corner connectors screwed through each board's corner holes, the bottom corners standing in the tray](docs/images/lab-rebuild-end.jpg)
+
 ## Origin and licence
 
 The design is from:
